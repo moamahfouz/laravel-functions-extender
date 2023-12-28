@@ -7,7 +7,7 @@ use Carbon\Carbon;
 class LaravelFunctionsExtender
 {
 
-    function formatCreatedAtDateTimeToArabic($dateTime): string
+    public function formatDateTimeToArabic($dateTime): string
     {
         $months = [
             1 => 'يناير',

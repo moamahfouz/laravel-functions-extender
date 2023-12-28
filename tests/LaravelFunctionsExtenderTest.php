@@ -17,12 +17,12 @@ class LaravelFunctionsExtenderTest extends TestCase
         $this->extender = new LaravelFunctionsExtender();
     }
 
-    public function testFormatCreatedAtDateTimeToArabic()
+    public function testFormatDateTimeToArabic()
     {
         $dateTime = '2023-12-25 12:34:56';
         $expectedResult = '25 ديسمبر 2023 12:34:56';
 
-        $result = $this->extender->formatCreatedAtDateTimeToArabic($dateTime);
+        $result = $this->extender->formatDateTimeToArabic($dateTime);
 
         $this->assertEquals($expectedResult, $result);
     }
