@@ -1,6 +1,6 @@
 {
   "name": "moamahfouz/laravel-functions-extender",
-  "description": "Some common functions I always use for laravel projects",
+  "description": "Some common functions I always use for arabic laravel projects",
   "type": "library",
   "license": "MIT",
   "authors": [
