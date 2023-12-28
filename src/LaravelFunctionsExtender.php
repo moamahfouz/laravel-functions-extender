@@ -7,31 +7,48 @@ use Carbon\Carbon;
 class LaravelFunctionsExtender
 {
 
+    /**
+     * @var array $MONTHS
+     * This array is used to store month
+     */
+    const MONTHS = [
+        '01' => 'يناير',
+        '02' => 'فبراير',
+        '03' => 'مارس',
+        '04' => 'ابريل',
+        '05' => 'مايو',
+        '06' => 'يونيو',
+        '07' => 'يوليو',
+        '08' => 'اغسطس',
+        '09' => 'سبتمبر',
+        '10' => 'اكتوبر',
+        '11' => 'نوفمبر',
+        '12' => 'ديسمبر',
+    ];
+
+    public function formatDateToArabic($date): string
+    {
+
+        $date = explode('-', $date);
+        $year = $date[0];
+        $month = $date[1];
+        $day = $date[2];
+
+        return $day . ' ' . self::MONTHS[$month] . ' ' . $year;
+    }
+
+
     public function formatDateTimeToArabic($dateTime): string
     {
-        $months = [
-            1 => 'يناير',
-            2 => 'فبراير',
-            3 => 'مارس',
-            4 => 'أبريل',
-            5 => 'مايو',
-            6 => 'يونيو',
-            7 => 'يوليو',
-            8 => 'أغسطس',
-            9 => 'سبتمبر',
-            10 => 'أكتوبر',
-            11 => 'نوفمبر',
-            12 => 'ديسمبر',
-        ];
-
         $carbonDate = Carbon::parse($dateTime);
 
         $day = $carbonDate->day;
-        $month = $months[$carbonDate->month];
+        $month = self::MONTHS[$carbonDate->month];
         $year = $carbonDate->year;
         $time = $carbonDate->format('H:i:s');
 
         return "{$day} {$month} {$year} {$time}";
     }
+
 
 }
