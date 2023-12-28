@@ -1,0 +1,26 @@
+{
+  "name": "moamahfouz/laravel-functions-extender",
+  "description": "Some common functions I always use for laravel projects",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Moahmmed Mahfouz",
+      "email": "moa.mahfouz@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Moamahfouz\\LaravelFunctionsExtender\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "nesbot/carbon": "^2.72"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require-dev": {
+    "phpunit/phpunit": "^10.5"
+  }
+}
