@@ -11,8 +11,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "Moamahfouz\\LaravelFunctionsExtender\\": "src/"
+      "Moamahfouz\\LaravelFunctionsExtender\\": "src/",
+      "Moamahfouz\\LaravelFunctionsExtender\\Tests\\": "tests/"
     }
+  },
+  "scripts": {
+    "test": "phpunit tests/"
   },
   "require": {
     "php": "^8.0",
