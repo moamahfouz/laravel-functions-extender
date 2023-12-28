@@ -50,5 +50,19 @@ class LaravelFunctionsExtender
         return "{$day} {$month} {$year} {$time}";
     }
 
+    public function formatDateTimeToArabicWithAmPm($dateTime): string
+    {
+        $carbonDate = Carbon::parse($dateTime);
+
+        $day = $carbonDate->day;
+        $month = self::MONTHS[$carbonDate->month];
+        $year = $carbonDate->year;
+        $time = $carbonDate->format('H:i:s');
+        $am_pm = $carbonDate->format('a');
+        $am_pm = $am_pm == 'am' ? 'صباحاً' : 'مساءً';
+
+        return "{$day} {$month} {$year} {$time} {$am_pm}";
+    }
+
 
 }
