@@ -30,8 +30,8 @@
   },
   "require": {
     "php": "^8.0",
-    "illuminate/support": "^8.0",
     "laravel/framework": "^9.0",
+    "illuminate/support": "^9.0",
     "nesbot/carbon": "^2.72"
   },
   "minimum-stability": "stable",

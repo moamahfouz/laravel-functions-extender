@@ -3,8 +3,9 @@
 namespace Moamahfouz\LaravelFunctionsExtender;
 
 use Carbon\Carbon;
+use Moamahfouz\LaravelFunctionsExtender\HTMLFunctions\HTMLFormatter;
 
-class LaravelFunctionsExtender
+class LaravelFunctionsExtender extends HTMLFormatter
 {
 
     /**
